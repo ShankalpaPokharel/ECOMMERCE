@@ -12,6 +12,10 @@ export default {
         'josefin': ['"Josefin Sans"', ...defaultTheme.fontFamily.sans],
         'lato': ['"Lato"', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'hero-pattern': "url('/src/assets/herobg.png')",
+        
+      }
     },
   },
   plugins: [],

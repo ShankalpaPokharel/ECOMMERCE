@@ -10,6 +10,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import banner1 from "../assets/banner-1.png";
+import banner2 from "../assets/banner-2.jpg";
+import banner3 from "../assets/banner-3.jpg";
+
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
     var settings = {
@@ -22,19 +26,18 @@ export default function Home() {
         autoplaySpeed: 5000,
         pauseOnHover: true,
         adaptiveHeight: true,
-       
-          customPaging: i => (
-            <div
-              className={`absolute bottom-20 w-[10px] h-[10px] border border-[#FB2E86] rotate-45 ${i===currentSlide ? 'bg-[#FB2E86]':'bg-[#FFFFFF]'}`}
-            >
-              
-            </div>
-           
-          ),
 
-          beforeChange: (oldIndex, newIndex) => {
+        customPaging: (i) => (
+            <div
+                className={`absolute bottom-20 w-[10px] h-[10px] border border-[#FB2E86] rotate-45 ${
+                    i === currentSlide ? "bg-[#FB2E86]" : "bg-[#FFFFFF]"
+                }`}
+            ></div>
+        ),
+
+        beforeChange: (oldIndex, newIndex) => {
             setCurrentSlide(newIndex);
-          }
+        },
     };
 
     return (
@@ -108,33 +111,31 @@ export default function Home() {
                         </div>
                     </div>
                 </nav>
-
-                {/* Hero Part */}
             </header>
 
-
+            {/* Hero Part */}
             <section className="">
                 <div className="relative">
-                    <div className="max-h-[764px] ">
+                    <div className="h-[764px] ">
                         <Slider {...settings} className="mx-w-full mx-h-full">
                             <div>
                                 <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
+                                    className="w-full h-[764px] object-cover"
+                                    src={banner1}
                                     alt=""
                                 />
                             </div>
                             <div>
                                 <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
+                                    className="w-full h-[764px] object-cover"
+                                    src={banner2}
                                     alt=""
                                 />
                             </div>
                             <div>
                                 <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    className="w-full h-[764px] object-cover"
+                                    src={banner3}
                                     alt=""
                                 />
                             </div>
@@ -168,92 +169,6 @@ export default function Home() {
                 dolore in exercitationem sit non quis error velit doloremque,
                 porro tenetur! Perferendis, obcaecati asperiores?
             </p>
-
-            
         </>
     );
 }
-
-
-{/* <section className="mt-7">
-                <div className="">
-                    <div className="max-h-[764px]">
-                        <Slider {...settings} className="mx-w-full mx-h-full">
-                            <div className="relative">
-                                <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
-                                    alt=""
-                                />
-                                <div className="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white">
-                                    <p className="font-bold text-[#FB2E86]">
-                                        Best Furniture For Your Castle
-                                    </p>
-                                    <p className="text-[53px] font-josefin w-[666px]">
-                                        New Furniture Collection Trends in 2024
-                                    </p>
-                                    <p className="text-[#8A8FB9] w-[580px]">
-                                        {" "}
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit Ratione repellat qui
-                                        ex?Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit
-                                    </p>
-                                    <button className="bg-[#FB2E86] px-10 py-4 font-josefin font-semibold text-[17px] text-white w-[163px]">
-                                        Shop Now
-                                    </button>
-                                </div>
-                            </div>
-                            <div>
-                                <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
-                                    alt=""
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    className="w-full max-h-[700px] object-cover"
-                                    src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt=""
-                                />
-                            </div>
-                        </Slider>
-                    </div>
-                    
-                </div>
-            </section>
- */}
-
-// static hero
-//  <section>
-//  <div className="bg-[url('../src/assets/herobg.png')] h-[764px] bg-no-repeat bg-cover relative">
-//      <div className="container py-[210px] space-y-[27px] ">
-//          <p className="font-bold text-[#FB2E86]">
-//              Best Furniture For Your Castle
-//          </p>
-//          <p className="text-[53px] font-josefin w-[666px]">
-//              New Furniture Collection Trends in 2024
-//          </p>
-//          <p className="text-[#8A8FB9] w-[580px]">
-//              {" "}
-//              Lorem ipsum dolor sit amet consectetur adipisicing
-//              elit Ratione repellat qui ex?Lorem ipsum dolor sit
-//              amet consectetur adipisicing elit
-//          </p>
-//          <button className="bg-[#FB2E86] px-10 py-4 font-josefin font-semibold text-[17px] text-white w-[163px]">
-//              Shop Now
-//          </button>
-
-//          <div className="absolute bottom-3 flex justify-center inset-x-0">
-//              <div className="flex gap-3">
-//                  <button className="w-[10px] h-[10px] bg-[#FB2E86] rotate-45"></button>
-
-//                  <button className="w-[10px] h-[10px] border border-[#FB2E86] rotate-45"></button>
-
-//                  <button className="w-[10px] h-[10px] border border-[#FB2E86] rotate-45"></button>
-//              </div>
-//          </div>
-//      </div>
-//  </div>
-// </section>

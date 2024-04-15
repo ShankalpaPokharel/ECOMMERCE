@@ -15,7 +15,14 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('/src/assets/herobg.png')",
         
-      }
+      },
+      colors: {
+        primary: "#151875",
+        "primary-bg" : "#7E33E0",
+        "primary-dark": "#0D0E43",
+        "primary-light": "#E7E6EF",
+        secondary: "#FB2E86",
+      },
     },
   },
   plugins: [],

@@ -23,6 +23,7 @@ export default function Home() {
         {name:"Cantilever chair", code:"Y523201",price:42.00,imgLink:"/FirstProductChair.png"},
         {name:"Cantilever chair", code:"Y523201",price:42.00,imgLink:"/FirstProductChair.png"},
         {name:"Cantilever chair", code:"Y523201",price:42.00,imgLink:"/FirstProductChair.png"},
+        
     ])
 
 

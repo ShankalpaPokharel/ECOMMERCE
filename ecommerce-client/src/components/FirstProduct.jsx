@@ -10,7 +10,7 @@ export default function FirstProduct(prod) {
 
     return (
         <div
-            className="w-[270px] h-[361px] shadow-lg hover:bg-[#2F1AC4] transition hover:duration-200 delay-150"
+            className="w-[270px] h-[361px] min-w-[270px] shadow-md mb-2 hover:bg-[#2F1AC4] "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

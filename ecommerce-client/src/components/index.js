@@ -5,6 +5,15 @@ import Hero from "./Hero";
 import LatestProduct from "./LatestProduct";
 import ShopexOffer from "./ShopexOffer";
 import UniqueLatest from "./UniqueLatest";
+import Footer from "./Footer";
 
-export {FirstProduct,FirstProductGroup,Header,Hero,LatestProduct,ShopexOffer,UniqueLatest}
-
+export {
+    FirstProduct,
+    FirstProductGroup,
+    Header,
+    Hero,
+    LatestProduct,
+    ShopexOffer,
+    UniqueLatest,
+    Footer
+};

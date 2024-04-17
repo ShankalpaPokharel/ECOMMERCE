@@ -6,7 +6,8 @@ import {
     Hero,
     LatestProduct,
     ShopexOffer,
-    UniqueLatest
+    UniqueLatest,
+    Footer
 } from "../components";
 
 export default function Home() {
@@ -26,6 +27,8 @@ export default function Home() {
             <ShopexOffer />
 
             <UniqueLatest/>
+
+            <Footer/>
         </>
     );
 }

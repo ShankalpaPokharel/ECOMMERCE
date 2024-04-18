@@ -9,26 +9,27 @@ import {
     UniqueLatest,
     Footer
 } from "../components";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
     return (
         <>
             <Header />
-
+            {/* <Navbar/> */}
             {/* Hero Part */}
-            <Hero />
+            {/* <Hero /> */}
 
             {/* first product group */}
-            <FirstProductGroup />
+            {/* <FirstProductGroup /> */}
             {/* <br /> */}
             {/* Latest Products  */}
-            <LatestProduct />
+            {/* <LatestProduct /> */}
 
-            <ShopexOffer />
+            {/* <ShopexOffer /> */}
 
-            <UniqueLatest/>
+            {/* <UniqueLatest/>
 
-            <Footer/>
+            <Footer/> */}
         </>
     );
 }

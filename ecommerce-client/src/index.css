@@ -6,7 +6,7 @@
 
 @layer components{
     .container{
-        @apply mx-auto max-w-[1170px]
+        @apply mx-auto  sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px]  xl:max-w-[1170px]
     }
 }
 
@@ -14,3 +14,4 @@
     background-color: rgba(255, 0, 0, 0.05);
 } */
 
+/* border border-black */

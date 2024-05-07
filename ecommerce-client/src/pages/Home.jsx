@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import {
-    Header,
+    // Header,
     FirstProductGroup,
     Hero,
     LatestProduct,
@@ -9,27 +9,27 @@ import {
     UniqueLatest,
     Footer
 } from "../components";
-import Navbar from "../components/Navbar";
+
 
 export default function Home() {
     return (
         <>
-            <Header />
-            {/* <Navbar/> */}
-            {/* Hero Part */}
-            {/* <Hero /> */}
+            {/* <Header /> */}
+             
+             {/* Hero Part  */}
+             <Hero /> 
 
-            {/* first product group */}
-            {/* <FirstProductGroup /> */}
-            {/* <br /> */}
-            {/* Latest Products  */}
-            {/* <LatestProduct /> */}
+             {/* first product group  */}
+             <FirstProductGroup /> 
+             {/* <br />  */}
+             {/* Latest Products   */}
+             <LatestProduct /> 
 
-            {/* <ShopexOffer /> */}
+             <ShopexOffer /> 
 
-            {/* <UniqueLatest/>
+             <UniqueLatest/>
 
-            <Footer/> */}
+            <Footer/> 
         </>
     );
 }

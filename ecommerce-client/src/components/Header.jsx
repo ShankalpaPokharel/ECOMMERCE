@@ -67,22 +67,22 @@ export default function Header() {
               className={`absolute  right-0 top-11 z-10 w-1/2 lg:static ${clicked ? "transition-all transform translate-x-0" : "transition-all transform translate-x-full "} md:block md:w-auto md:top-auto`}
             >
               <ul className="gap-9 space-y-3 rounded bg-[#EEEFFB] p-3  md:flex md:p-0 md:bg-white md:items-center md:space-y-0    ">
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Home
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Pages
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Products
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Blog
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Shop
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
                   Contact
                 </li>
               </ul>

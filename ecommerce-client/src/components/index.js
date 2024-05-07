@@ -6,6 +6,7 @@ import LatestProduct from "./LatestProduct";
 import ShopexOffer from "./ShopexOffer";
 import UniqueLatest from "./UniqueLatest";
 import Footer from "./Footer";
+import ProductPage from "./ProductPage";
 
 export {
     FirstProduct,
@@ -15,5 +16,6 @@ export {
     LatestProduct,
     ShopexOffer,
     UniqueLatest,
-    Footer
+    Footer,
+    ProductPage
 };

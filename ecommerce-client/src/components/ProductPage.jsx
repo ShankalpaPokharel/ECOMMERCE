@@ -1,64 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { useParams } from 'react-router-dom'
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+
+
+import Ratings from "./Ratings";
 
 export default function ProductPage() {
-    const [productDetails, setProductDetails] = useState([])
-    const {id} = useParams()
-    console.log("Id : ",id )
+  const [productDetails, setProductDetails] = useState({});
+  const [ratingValue, setRatingValue] = useState(5);
 
-    let totalStar = new Array(5).fill(null)
+  const { id } = useParams();
 
-    useEffect(() => {
-        axios.get(`https://ecommerce-sagartmg2.vercel.app/api/products/${id}`)
-        .then((response)=>{
-            console.log(response.data.data)
-            setProductDetails(response.data.data)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-    }, [id])
-    
-   
+  useEffect(() => {
+    axios
+      .get(`https://ecommerce-sagartmg2.vercel.app/api/products/${id}`)
+      .then((response) => {
+        const data = response.data.data;
+        setProductDetails(data);
+        setRatingValue(data.avg_rating);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+
+  
+  
   return (
-   <>
-   {JSON.stringify(productDetails)}
-   <div>
-    <div className='container shadow-sm'>
-        <div>
+    <>
+      <div>
+        <div className="container shadow-sm">
+          <div>
             <img src={productDetails.image} alt="" />
+          </div>
+          <div>
+            <Ratings ratingVal={ratingValue}/>
+          </div>
         </div>
-        <div>
-        {/* <FaStar />
-        <FaStarHalf /> */}
-        star 
-        {totalStar.map((_, index) => <p key={index}>HI</p>)}
-        </div>
-        
-    </div>
-   </div>
-   <div className=''>
-
-   </div>
-   <div style={{ display: 'inline-block', position: 'relative' }}>
-      <FaStar style={{ color: '#ffc107' }} />
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '70%', // Adjust the width to change the fill percentage
-          overflow: 'hidden',
-          color: '#000000'
-        }}
-      >
-        <FaStar />
       </div>
-    </div>
-   </>
-  )
+    </>
+  );
 }
-
-

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+
 
 import { CiMail, CiHeart } from "react-icons/ci";
 import { TbPhoneCall } from "react-icons/tb";
@@ -41,7 +44,8 @@ export default function Header() {
               <RiArrowDropDownLine className="inline-block size-4" />
             </div>
             <div className="">
-              <span>Login </span>
+              <Link to={"login"}><span>Login </span></Link>
+              
               <FiUser className="inline-block size-4" />
             </div>
             <div className="hidden md:block">
@@ -59,30 +63,33 @@ export default function Header() {
       <nav className="py-[18px]">
         <div className="container  relative flex items-center justify-between px-3 sm:px-0">
           <div className="flex md:items-center ">
+            <Link to={""}>
             <span className="mr-[91px] items-center  font-josefin text-[34px]">
               Hekto
             </span>
+            </Link>
+            
 
             <div
-              className={`absolute  right-0 top-11 z-10 w-1/2 lg:static ${clicked ? "transition-all transform translate-x-0" : "transition-all transform translate-x-full "} md:block md:w-auto md:top-auto`}
+              className={`absolute  right-0 top-11 z-10 w-1/2 lg:static ${clicked ? "translate-x-0 transform transition-all" : "hidden translate-x-full transform transition-all "} md:top-auto md:block md:w-auto md:translate-x-0 md:transition-none `}
             >
-              <ul className="gap-9 space-y-3 rounded bg-[#EEEFFB] p-3  md:flex md:p-0 md:bg-white md:items-center md:space-y-0    ">
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+              <ul className="gap-9 space-y-3 rounded bg-[#EEEFFB] p-3  md:flex md:items-center md:space-y-0 md:bg-white md:p-0    ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Home
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Pages
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Products
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Blog
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Shop
                 </li>
-                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:hover:bg-transparent md:hover:text-secondary md:h-auto md:w-auto md:rounded-none ">
+                <li className="h-full w-full rounded p-2 hover:bg-[#E7E4F8] md:h-auto md:w-auto md:rounded-none md:hover:bg-transparent md:hover:text-secondary ">
                   Contact
                 </li>
               </ul>

@@ -25,11 +25,11 @@ export default function Home() {
              {/* Latest Products   */}
              <LatestProduct /> 
 
-             <ShopexOffer /> 
+             {/* <ShopexOffer /> 
 
-             <UniqueLatest/>
+             <UniqueLatest/> */}
 
-            <Footer/> 
+            {/* <Footer/>  */}
         </>
     );
 }

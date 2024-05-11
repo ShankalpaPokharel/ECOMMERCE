@@ -7,6 +7,8 @@ import ShopexOffer from "./ShopexOffer";
 import UniqueLatest from "./UniqueLatest";
 import Footer from "./Footer";
 import ProductPage from "./ProductPage";
+import Signup from "./Signup";
+import Login from "./Login";
 
 export {
     FirstProduct,
@@ -17,5 +19,7 @@ export {
     ShopexOffer,
     UniqueLatest,
     Footer,
-    ProductPage
+    ProductPage,
+    Signup,
+    Login
 };

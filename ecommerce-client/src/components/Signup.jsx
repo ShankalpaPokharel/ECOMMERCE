@@ -127,11 +127,7 @@ export default function Signup() {
         <span className="mt-7 text-sub-text">
           Already have an Account? <Link to={"/login"}  className="underline hover:text-secondary  cursor-pointer">Login</Link>
         </span>
-      </div>
-
-
-      
-      
+      </div>    
     </div>
   );
 }

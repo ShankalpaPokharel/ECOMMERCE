@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function Login() {
+    // const notify = () => toast("Wow so easy!")
+
   const [error, setError] = useState();
   const [showPassord, setShowPassord] = useState(true);
   const handleSubmit = (e) => {
@@ -32,19 +37,23 @@ export default function Login() {
           password
         })
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
+          localStorage.setItem("access_token",response.data.access_token) 
         })
         .catch((error) => {
-          console.log(error.response.data.errors);
+            console.log(error)
+            console.log(error.response?.data.msg)
+            toast.error(error.response?.data.msg)
+        //   console.log(error.response.data.errors);
 
-          let berror = error.response.data.errors;
-          let err = {};
-          for (let i of berror) {
-            // console.log(i)
-            err[i.param] = i.msg;
-          }
-          console.log(err);
-          setError(err);
+        //   let berror = error.response.data.errors;
+        //   let err = {};
+        //   for (let i of berror) {
+        //     // console.log(i)
+        //     err[i.param] = i.msg;
+        //   }
+        //   console.log(err);
+        //   setError(err);
         });
     } else {
       console.log("error frontend", errorCheck);
@@ -115,3 +124,7 @@ export default function Login() {
 
 //dovogetyj@mailinator.com
 // Laborum Aut ex aliq
+
+
+// qipire@mailinator.com
+// Consectetur nihil i

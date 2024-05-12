@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import ProductPage from "./ProductPage";
 import Signup from "./Signup";
 import Login from "./Login";
+import PageNotFound from "./PageNotFound";
 
 export {
     FirstProduct,
@@ -21,5 +22,6 @@ export {
     Footer,
     ProductPage,
     Signup,
-    Login
+    Login,
+    PageNotFound
 };

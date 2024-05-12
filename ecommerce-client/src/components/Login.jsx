@@ -24,13 +24,12 @@ export default function Login() {
 
     if (Object.keys(errorCheck).length === 0) {
       console.log("No error frontend");
-      console.log(name, email, password, role);
+      console.log( email, password);
       axios
-        .post("https://ecommerce-sagartmg2.vercel.app/api/users/signup", {
-          name,
+        .post("https://ecommerce-sagartmg2.vercel.app/api/users/login", {
+          
           email,
-          password,
-          role,
+          password
         })
         .then((response) => {
           console.log(response.data);
@@ -96,7 +95,7 @@ export default function Login() {
             <span className="text-red-700">{error?.password}</span>
           </div>
           <button className="w-full  max-w-[544px] rounded bg-secondary py-2 font-josefin font-bold text-white">
-            Sign up
+            Login
           </button>
         </form>
         <span className="mt-7 text-sub-text">
@@ -112,3 +111,7 @@ export default function Login() {
     </div>
   );
 }
+
+
+//dovogetyj@mailinator.com
+// Laborum Aut ex aliq

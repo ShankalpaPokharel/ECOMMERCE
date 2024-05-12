@@ -1,4 +1,4 @@
-import { Header, Login, ProductPage, Signup } from "./components"
+import { Header, Login, PageNotFound, ProductPage, Signup } from "./components"
 import Home from "./pages/Home"
 // import Template from "./pages/Template";
 import { Outlet } from "react-router-dom"
@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Template from "./pages/Template";
+import MyForm from "./components/Myform";
 
 const router= createBrowserRouter([
   {
@@ -27,6 +28,14 @@ const router= createBrowserRouter([
     {
       path:"/login",
       element:<Login/>
+    },
+    {
+      path:"/myform",
+      element:<MyForm/>
+    },
+    {
+      path:"*",
+      element:<PageNotFound/>
     }
   ]
   }

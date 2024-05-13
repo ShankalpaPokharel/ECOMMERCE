@@ -10,6 +10,7 @@ import ProductPage from "./ProductPage";
 import Signup from "./Signup";
 import Login from "./Login";
 import PageNotFound from "./PageNotFound";
+import AddProduct from "./AddProduct";
 
 export {
     FirstProduct,
@@ -23,5 +24,6 @@ export {
     ProductPage,
     Signup,
     Login,
-    PageNotFound
+    PageNotFound,
+    AddProduct
 };

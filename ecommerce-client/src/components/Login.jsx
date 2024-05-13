@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { useDispatch } from "react-redux";
+import { setReduxUser } from "../redux/slice/userSlice";
 
 export default function Login() {
-    // const notify = () => toast("Wow so easy!")
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
   const [error, setError] = useState();
   const [showPassord, setShowPassord] = useState(true);
@@ -29,31 +34,35 @@ export default function Login() {
 
     if (Object.keys(errorCheck).length === 0) {
       console.log("No error frontend");
-      console.log( email, password);
+      console.log(email, password);
       axios
         .post("https://ecommerce-sagartmg2.vercel.app/api/users/login", {
-          
           email,
-          password
+          password,
         })
         .then((response) => {
           console.log(response);
-          localStorage.setItem("access_token",response.data.access_token) 
+          console.log(response.data.access_token)
+          localStorage.setItem("access_token", response.data.access_token);
+          
+          dispatch(setReduxUser(response.data.user))
+          navigate("/")
         })
         .catch((error) => {
-            console.log(error)
-            console.log(error.response?.data.msg)
-            toast.error(error.response?.data.msg)
-        //   console.log(error.response.data.errors);
+          console.log(error);
+          console.log(error.response?.data.msg);
+          toast.error(error.response?.data.msg);
+         
+          //   console.log(error.response.data.errors);
 
-        //   let berror = error.response.data.errors;
-        //   let err = {};
-        //   for (let i of berror) {
-        //     // console.log(i)
-        //     err[i.param] = i.msg;
-        //   }
-        //   console.log(err);
-        //   setError(err);
+          //   let berror = error.response.data.errors;
+          //   let err = {};
+          //   for (let i of berror) {
+          //     // console.log(i)
+          //     err[i.param] = i.msg;
+          //   }
+          //   console.log(err);
+          //   setError(err);
         });
     } else {
       console.log("error frontend", errorCheck);
@@ -96,7 +105,10 @@ export default function Login() {
                 placeholder="Password"
                 className=" w-full rounded border border-[#C2C5E1] p-2"
               />
-              <button className="absolute top-1/2 right-4 -translate-y-1/2 " onClick={toggleEye}>
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 "
+                onClick={toggleEye}
+              >
                 {showPassord ? <GoEye /> : <GoEyeClosed />}
               </button>
             </div>
@@ -121,10 +133,8 @@ export default function Login() {
   );
 }
 
-
 //dovogetyj@mailinator.com
 // Laborum Aut ex aliq
-
 
 // qipire@mailinator.com
 // Consectetur nihil i
